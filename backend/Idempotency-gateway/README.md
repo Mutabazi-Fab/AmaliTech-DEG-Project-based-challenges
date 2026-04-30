@@ -1,7 +1,7 @@
 #  Idempotency-Gateway (The "Pay-Once" Protocol)
 
 ### **Overview**
-This project implements a robust **Idempotency Layer** for FinSafe Transactions Ltd. to prevent double-charging customers due to network retries or race conditions. This solution ensures that no matter how many times a client retries a payment request, the transaction is processed **exactly once**.
+This project implements a robust **Idempotency Layer** for FinSafe Transactions Ltd. to prevent double charging customers due to network retries or race conditions. This solution ensures that no matter how many times a client retries a payment request, the transaction is processed **exactly once**.
 
 ---
 
@@ -47,7 +47,7 @@ This project implements a robust **Idempotency Layer** for FinSafe Transactions 
 ```
 
 **Response Behavior:**
-*   **Success (New):** Returns `200 OK` with "Charged...". Processes in ~2 seconds.
+*   **Success (New):** Returns `200 OK` with "Charged...". Processes in 2 seconds.
 *   **Success (Duplicate):** Returns `200 OK` instantly with header `X-Cache-Hit: true`.
 *   **Error (Missing Key):** Returns `400 Bad Request`.
 *   **Error (Body Mismatch):** Returns `409 Conflict` if the same key is used for a different amount/currency.
