@@ -5,7 +5,7 @@ This project implements a robust **Idempotency Layer** for FinSafe Transactions 
 
 ---
 
-### **1. Architecture Diagram**
+### **1. Architecture Diagram(Flowchart)**
 
 ![System Flowchart](my_diagram.png)
 
